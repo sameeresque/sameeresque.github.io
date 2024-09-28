@@ -410,9 +410,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const conferenceSelect = document.getElementById('conferenceSelect');
 
     const conferences = {
-        'Conference 2024': [
-            { src: 'photos/Aspen/AspenGroupPhoto.JPG', desc: 'Description of Conference 2024 Image 1' },
-            { src: 'photos/conference2024/image2.jpg', desc: 'Description of Conference 2024 Image 2' },
+        'Aspen Center for Physics': [
+            { src: 'photos/Aspen/AspenGroupPhoto.JPG', desc: 'A group photo of the participants in attendance for the workshop on understanding the Multiphase CGM at Aspen Center for Physics, Aspen, Colorado.' },
+            { src: 'photos/Aspen/BlackBoardTalk1.jpg', desc: 'A blackboard talk delivered by me on small scale structure in the CGM.' },
+		{ src: 'photos/Aspen/BlackBoardTalk2.jpg', desc: 'A blackboard talk delivered by me on small scale structure in the CGM.' },
+		{ src: 'photos/Aspen/View1.jpg', desc: 'A stunning view of a manicured landscape surrounded by rolling hills in Aspen.' },
+		{ src: 'photos/Aspen/View2.jpg', desc: 'A serene golf course featuring a tranquil pond.' },
+		{ src: 'photos/Aspen/View3.jpg', desc: 'Majestic Maroon Bells peaks towering over an alpine lake.'},
+		{ src: 'photos/Aspen/BalloonFestival1.jpg', desc: 'Snowmass Balloon Festival during the popular Night Glow - a long-standing rocky mountain tradition.'},
+		{ src: 'photos/Aspen/BalloonFestival2.jpg', desc: 'Vibrant hot air balloons illuminate the twilight sky at the festival.'}
             // Add more images for this conference
         ],
         'Conference 2023': [

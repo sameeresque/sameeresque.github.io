@@ -1668,7 +1668,7 @@ input, select, textarea {
 .gallery-container img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 1em;
+    margin: 1em 0;
 }
 
 .gallery-controls {
@@ -1677,4 +1677,16 @@ input, select, textarea {
 
 .gallery-controls button {
     margin: 0 0.5em;
+}
+
+#conferenceSelect {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+}
+
+#photoCounter {
+    font-style: italic;
+    margin-top: 0.5em;
 }

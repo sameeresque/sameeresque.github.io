@@ -399,3 +399,38 @@
 					});
 
 })(jQuery);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryImage = document.getElementById('galleryImage');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const imageDescription = document.getElementById('imageDescription');
+
+    const images = [
+        { src: 'photos/conference1/image1.jpg', desc: 'Description of Conference 1 Image 1' },
+        { src: 'photos/conference1/image2.jpg', desc: 'Description of Conference 1 Image 2' },
+        { src: 'photos/conference2/image1.jpg', desc: 'Description of Conference 2 Image 1' },
+        // Add more images and descriptions as needed
+    ];
+
+    let currentIndex = 0;
+
+    function updateImage() {
+        galleryImage.src = images[currentIndex].src;
+        imageDescription.textContent = images[currentIndex].desc;
+    }
+
+    prevButton.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    });
+
+    nextButton.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    });
+
+    // Initialize with the first image
+    updateImage();
+});

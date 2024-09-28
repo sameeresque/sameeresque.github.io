@@ -421,9 +421,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		{ src: 'photos/Aspen/BalloonFestival2.jpg', desc: 'Vibrant hot air balloons illuminate the twilight sky at the festival.'}
             // Add more images for this conference
         ],
-        'Conference 2023': [
-            { src: 'photos/Harvard/PresentationPic.jpg', desc: 'Description of Conference 2023 Image 1' },
-            { src: 'photos/conference2023/image2.jpg', desc: 'Description of Conference 2023 Image 2' },
+        'Resolving the CGM in Theory and Observations at Harvard': [
+            { src: 'photos/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy.' },
+            { src: 'photos/Harvard/Library.jpg', desc: 'Harvard Library - the largest academic and private library in the world.' },
+		 { src: 'photos/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' },
             // Add more images for this conference
         ],
         // Add more conferences as needed

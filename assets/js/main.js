@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageDescription = document.getElementById('imageDescription');
 
     const images = [
-        { src: 'photos/conference1/image1.jpg', desc: 'Description of Conference 1 Image 1' },
+        { src: 'photos/Aspen/AspenGroupPhoto.JPG', desc: 'Description of Conference 1 Image 1' },
         { src: 'photos/conference1/image2.jpg', desc: 'Description of Conference 1 Image 2' },
         { src: 'photos/conference2/image1.jpg', desc: 'Description of Conference 2 Image 1' },
         // Add more images and descriptions as needed

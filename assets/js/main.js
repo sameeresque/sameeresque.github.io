@@ -406,31 +406,61 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.getElementById('prevButton');
     const nextButton = document.getElementById('nextButton');
     const imageDescription = document.getElementById('imageDescription');
+    const photoCounter = document.getElementById('photoCounter');
+    const conferenceSelect = document.getElementById('conferenceSelect');
 
-    const images = [
-        { src: 'photos/Aspen/AspenGroupPhoto.JPG', desc: 'Description of Conference 1 Image 1' },
-        { src: 'photos/conference1/image2.jpg', desc: 'Description of Conference 1 Image 2' },
-        { src: 'photos/conference2/image1.jpg', desc: 'Description of Conference 2 Image 1' },
-        // Add more images and descriptions as needed
-    ];
+    const conferences = {
+        'Conference 2024': [
+            { src: 'photos/Aspen/AspenGroupPhoto.JPG', desc: 'Description of Conference 2024 Image 1' },
+            { src: 'photos/conference2024/image2.jpg', desc: 'Description of Conference 2024 Image 2' },
+            // Add more images for this conference
+        ],
+        'Conference 2023': [
+            { src: 'photos/Harvard/PresentationPic.jpg', desc: 'Description of Conference 2023 Image 1' },
+            { src: 'photos/conference2023/image2.jpg', desc: 'Description of Conference 2023 Image 2' },
+            // Add more images for this conference
+        ],
+        // Add more conferences as needed
+    };
 
+    let currentConference = Object.keys(conferences)[0];
     let currentIndex = 0;
 
     function updateImage() {
+        const images = conferences[currentConference];
         galleryImage.src = images[currentIndex].src;
         imageDescription.textContent = images[currentIndex].desc;
+        photoCounter.textContent = `Photo ${currentIndex + 1} of ${images.length}`;
+    }
+
+    function populateConferenceSelect() {
+        for (let conference in conferences) {
+            let option = document.createElement('option');
+            option.value = conference;
+            option.textContent = conference;
+            conferenceSelect.appendChild(option);
+        }
     }
 
     prevButton.addEventListener('click', function() {
+        const images = conferences[currentConference];
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         updateImage();
     });
 
     nextButton.addEventListener('click', function() {
+        const images = conferences[currentConference];
         currentIndex = (currentIndex + 1) % images.length;
         updateImage();
     });
 
-    // Initialize with the first image
+    conferenceSelect.addEventListener('change', function() {
+        currentConference = this.value;
+        currentIndex = 0;
+        updateImage();
+    });
+
+    // Initialize
+    populateConferenceSelect();
     updateImage();
 });

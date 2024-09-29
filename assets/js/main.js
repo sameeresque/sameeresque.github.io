@@ -399,3 +399,74 @@
 					});
 
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryImage = document.getElementById('galleryImage');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const imageDescription = document.getElementById('imageDescription');
+    const photoCounter = document.getElementById('photoCounter');
+    const conferenceSelect = document.getElementById('conferenceSelect');
+
+    const conferences = {
+        'Aspen Center for Physics': [
+            { src: 'photos/Aspen/AspenGroupPhoto.JPG', desc: 'A group photo of the participants in attendance for the workshop on understanding the Multiphase CGM at Aspen Center for Physics, Aspen, Colorado.' },
+            { src: 'photos/Aspen/BlackBoardTalk1.jpg', desc: 'A blackboard talk delivered by me on small scale structure in the CGM.' },
+		{ src: 'photos/Aspen/BlackBoardTalk2.jpg', desc: 'A blackboard talk delivered by me on small scale structure in the CGM.' },
+		{ src: 'photos/Aspen/View1.jpg', desc: 'A stunning view of a manicured landscape surrounded by rolling hills in Aspen.' },
+		{ src: 'photos/Aspen/View2.jpg', desc: 'A serene golf course featuring a tranquil pond.' },
+		{ src: 'photos/Aspen/View3.jpg', desc: 'Majestic Maroon Bells peaks towering over an alpine lake.'},
+		{ src: 'photos/Aspen/BalloonFestival1.jpg', desc: 'Snowmass Balloon Festival during the popular Night Glow - a long-standing rocky mountain tradition.'},
+		{ src: 'photos/Aspen/BalloonFestival2.jpg', desc: 'Vibrant hot air balloons illuminate the twilight sky at the festival.'}
+            // Add more images for this conference
+        ],
+        'Resolving the CGM in Theory and Observations at Harvard': [
+            { src: 'photos/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy.' },
+            { src: 'photos/Harvard/Library.jpg', desc: 'Harvard Library - the largest academic and private library in the world.' },
+		 { src: 'photos/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' }
+            // Add more images for this conference
+        ],
+        // Add more conferences as needed
+    };
+
+    let currentConference = Object.keys(conferences)[0];
+    let currentIndex = 0;
+
+    function updateImage() {
+        const images = conferences[currentConference];
+        galleryImage.src = images[currentIndex].src;
+        imageDescription.textContent = images[currentIndex].desc;
+        photoCounter.textContent = `Photo ${currentIndex + 1} of ${images.length}`;
+    }
+
+    function populateConferenceSelect() {
+        for (let conference in conferences) {
+            let option = document.createElement('option');
+            option.value = conference;
+            option.textContent = conference;
+            conferenceSelect.appendChild(option);
+        }
+    }
+
+    prevButton.addEventListener('click', function() {
+        const images = conferences[currentConference];
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    });
+
+    nextButton.addEventListener('click', function() {
+        const images = conferences[currentConference];
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    });
+
+    conferenceSelect.addEventListener('change', function() {
+        currentConference = this.value;
+        currentIndex = 0;
+        updateImage();
+    });
+
+    // Initialize
+    populateConferenceSelect();
+    updateImage();
+});

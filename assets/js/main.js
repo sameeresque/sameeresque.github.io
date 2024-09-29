@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Resolving the CGM in Theory and Observations at Harvard': [
             { src: 'photos/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy.' },
             { src: 'photos/Harvard/Library.jpg', desc: 'Harvard Library - the largest academic and private library in the world.' },
-		 { src: 'photos/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' },
+		 { src: 'photos/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' }
             // Add more images for this conference
         ],
         // Add more conferences as needed

@@ -1679,7 +1679,6 @@ input, select, textarea {
     margin: 0 0.5em;
 }
 #yearSelect {
-    font-size: 0.8em;
     padding: 5px;
     width: 80px; /* Adjust this value as needed */
 }

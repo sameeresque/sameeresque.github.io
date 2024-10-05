@@ -399,3 +399,79 @@
 					});
 
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryImage = document.getElementById('galleryImage');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const imageDescription = document.getElementById('imageDescription');
+    const photoCounter = document.getElementById('photoCounter');
+    const conferenceSelect = document.getElementById('conferenceSelect');
+
+    const conferences = {
+        'Aspen Center for Physics (2024)': [
+            { src: 'photos/2024/Aspen/AspenGroupPhoto.JPG', desc: 'A group photo of the participants in attendance for the workshop on understanding the Multiphase CGM at Aspen Center for Physics, Aspen, Colorado.' },
+            { src: 'photos/2024/Aspen/BlackBoardTalk1.jpg', desc: 'Delivering a blackboard talk on small scale structure in the CGM.' },
+		{ src: 'photos/2024/Aspen/BlackBoardTalk2.jpg', desc: 'Delivering a blackboard talk on small scale structure in the CGM.' },
+		{ src: 'photos/2024/Aspen/View1.jpg', desc: 'A stunning view of a manicured landscape surrounded by rolling hills in Aspen.' },
+		{ src: 'photos/2024/Aspen/View3.jpg', desc: 'Majestic Maroon Bells peaks towering over an alpine lake.'},
+		{ src: 'photos/2024/Aspen/BalloonFestival1.jpg', desc: 'Vibrant hot air balloons illuminate the twilight sky at the festival.'},
+		{ src: 'photos/2024/Aspen/BalloonFestival2.jpg', desc: 'Snowmass Balloon Festival during the popular Night Glow - a long-standing rocky mountain tradition.'}
+            // Add more images for this conference
+        ],
+        'Harvard University (2024)': [
+            { src: 'photos/2024/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy at the Multiphase Madness: Resolving the CGM in Theory and Observations.' },
+            { src: 'photos/2024/Harvard/Library.jpg', desc: 'Harvard Library - the largest academic and private library in the world.' },
+		 { src: 'photos/2024/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' }
+            // Add more images for this conference
+        ],
+	'Arizona State University (2023)': [
+            { src: 'photos/2023/ASU/GroupPhoto.jpg', desc: 'A group photo of the participants in attendance for the conference on Oases in the Cosmic Desert: Understanding the Structure of the Circumgalactic Medium at ASU, Arizona.' },
+            { src: 'photos/2023/ASU/Talk.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' },
+		 { src: 'photos/2023/ASU/Talk2.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' }
+            // Add more images for this conference
+        ]
+        // Add more conferences as needed
+    };
+
+    let currentConference = Object.keys(conferences)[0];
+    let currentIndex = 0;
+
+    function updateImage() {
+        const images = conferences[currentConference];
+        galleryImage.src = images[currentIndex].src;
+        imageDescription.textContent = images[currentIndex].desc;
+        photoCounter.textContent = `Photo ${currentIndex + 1} of ${images.length}`;
+    }
+
+    function populateConferenceSelect() {
+        for (let conference in conferences) {
+            let option = document.createElement('option');
+            option.value = conference;
+            option.textContent = conference;
+            conferenceSelect.appendChild(option);
+        }
+    }
+
+    prevButton.addEventListener('click', function() {
+        const images = conferences[currentConference];
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    });
+
+    nextButton.addEventListener('click', function() {
+        const images = conferences[currentConference];
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    });
+
+    conferenceSelect.addEventListener('change', function() {
+        currentConference = this.value;
+        currentIndex = 0;
+        updateImage();
+    });
+
+    // Initialize
+    populateConferenceSelect();
+    updateImage();
+});

@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
 	'Northwestern University': [
                 { src: 'photos/2024/CodeAstro/Presentation.jpg', desc: 'Presenting our Absorption line finding algorithm and its development at Code Astro.' },
-                { src: 'photos/2024/CodeAstro/Presentation2.jpg', desc: 'Demonstrating the setup of pyALF package for finding absorption lines in quasar spectra.' },
+                { src: 'photos/2024/CodeAstro/Presentation2.jpg', desc: 'Demonstrating the setup of pyALF package for finding absorption lines in quasar spectra.' }
             ]
 	},
         '2023': {

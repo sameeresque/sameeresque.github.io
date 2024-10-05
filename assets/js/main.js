@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	},
         '2023': {
             'Arizona State University': [
-                { src: 'photos/2023/ASU/GroupPhoto.JPG', desc: 'A group photo of the participants in attendance for the conference on Oases in the Cosmic Desert: Understanding the Structure of the Circumgalactic Medium at ASU, Arizona.'},
+                { src: 'photos/2023/ASU/GroupPhoto.jpg', desc: 'A group photo of the participants in attendance for the conference on Oases in the Cosmic Desert: Understanding the Structure of the Circumgalactic Medium at ASU, Arizona.'},
                 { src: 'photos/2023/ASU/Talk.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' },
                 { src: 'photos/2023/ASU/Talk2.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' }
             ]

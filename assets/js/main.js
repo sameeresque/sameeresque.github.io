@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { src: 'photos/2024/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy at the conference on Multiphase Madness: Resolving the CGM in Theory and Observations.' },
                 { src: 'photos/2024/Harvard/Library.jpg', desc: 'Harvard Library - the largest academic and private library in the world.' },
                 { src: 'photos/2024/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' }
-            ]
+            ],
 	'Northwestern University': [
                 { src: 'photos/2024/CodeAstro/Presentation.jpg', desc: 'Presenting our Absorption line finding algorithm and its development at Code Astro.' },
                 { src: 'photos/2024/CodeAstro/Presentation2.jpg', desc: 'Demonstrating the setup of pyALF package for finding absorption lines in quasar spectra.' },

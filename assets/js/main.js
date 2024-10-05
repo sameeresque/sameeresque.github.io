@@ -406,12 +406,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextButton = document.getElementById('nextButton');
     const imageDescription = document.getElementById('imageDescription');
     const photoCounter = document.getElementById('photoCounter');
-    const yearSelect = document.getElementById('yearSelect');
     const conferenceSelect = document.getElementById('conferenceSelect');
 
-    const photosByYear = {
-        '2024': {
-            'Aspen Center for Physics': [
+
+    const photosByConference = {
+        'Aspen Center for Physics (2024)': [
                 { src: 'photos/2024/Aspen/AspenGroupPhoto.JPG', desc: 'A group photo of the participants in attendance for the workshop on understanding the Multiphase CGM at Aspen Center for Physics, Aspen, Colorado.' },
                 { src: 'photos/2024/Aspen/BlackBoardTalk1.jpg', desc: 'A blackboard talk delivered by me on small scale structure in the CGM.' },
                 { src: 'photos/2024/Aspen/BlackBoardTalk2.jpg', desc: 'A blackboard talk delivered by me on small scale structure in the CGM.' },
@@ -421,14 +420,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 { src: 'photos/2024/Aspen/BalloonFestival1.jpg', desc: 'Snowmass Balloon Festival during the popular Night Glow - a long-standing rocky mountain tradition.'},
                 { src: 'photos/2024/Aspen/BalloonFestival2.jpg', desc: 'Vibrant hot air balloons illuminate the twilight sky at the festival.'}
             ],
-            'Harvard University': [
+            'Harvard University (2024)': [
                 { src: 'photos/2024/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy at the conference on Multiphase Madness: Resolving the CGM in Theory and Observations.' },
                 { src: 'photos/2024/Harvard/Library.jpg', desc: 'Harvard Library - the largest academic and private library in the world.' },
                 { src: 'photos/2024/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' }
-            ]
-	},
-        '2023': {
-            'Arizona State University': [
+            ],
+	'Arizona State University (2023)': [
                 { src: 'photos/2023/ASU/GroupPhoto.jpg', desc: 'A group photo of the participants in attendance for the conference on Oases in the Cosmic Desert: Understanding the Structure of the Circumgalactic Medium at ASU, Arizona.'},
                 { src: 'photos/2023/ASU/Talk.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' },
                 { src: 'photos/2023/ASU/Talk2.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' }
@@ -437,30 +434,19 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add more years and conferences as needed
     };
 
-    let currentYear = Object.keys(photosByYear)[0];
-    let currentConference = Object.keys(photosByYear[currentYear])[0];
+    let currentConference = Object.keys(photosByConference)[0];
     let currentIndex = 0;
 
     function updateImage() {
-        const images = photosByYear[currentYear][currentConference];
+        const images = photosByConference[currentConference];
         galleryImage.src = images[currentIndex].src;
         imageDescription.textContent = images[currentIndex].desc;
         photoCounter.textContent = `Photo ${currentIndex + 1} of ${images.length}`;
     }
 
-    function populateYearSelect() {
-        yearSelect.innerHTML = '';
-        for (let year in photosByYear) {
-            let option = document.createElement('option');
-            option.value = year;
-            option.textContent = year;
-            yearSelect.appendChild(option);
-        }
-    }
-
     function populateConferenceSelect() {
         conferenceSelect.innerHTML = '';
-        for (let conference in photosByYear[currentYear]) {
+        for (let conference in photosByConference) {
             let option = document.createElement('option');
             option.value = conference;
             option.textContent = conference;
@@ -469,22 +455,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     prevButton.addEventListener('click', function() {
-        const images = photosByYear[currentYear][currentConference];
+        const images = photosByConference[currentConference];
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         updateImage();
     });
 
     nextButton.addEventListener('click', function() {
-        const images = photosByYear[currentYear][currentConference];
+        const images = photosByConference[currentConference];
         currentIndex = (currentIndex + 1) % images.length;
-        updateImage();
-    });
-
-    yearSelect.addEventListener('change', function() {
-        currentYear = this.value;
-        populateConferenceSelect();
-        currentConference = Object.keys(photosByYear[currentYear])[0];
-        currentIndex = 0;
         updateImage();
     });
 
@@ -495,7 +473,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initialize
-    populateYearSelect();
     populateConferenceSelect();
     updateImage();
 });

@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const photosByConference = {
-        'Aspen Center for Physics (2024)': [
+        'Aspen Center for Physics': [
                 { src: 'photos/2024/Aspen/AspenGroupPhoto.JPG', desc: 'A group photo of the participants in attendance for the workshop on understanding the Multiphase CGM at Aspen Center for Physics, Aspen, Colorado.' },
                 { src: 'photos/2024/Aspen/BlackBoardTalk1.jpg', desc: 'A blackboard talk delivered by me on small scale structure in the CGM.' },
                 { src: 'photos/2024/Aspen/BlackBoardTalk2.jpg', desc: 'A blackboard talk delivered by me on small scale structure in the CGM.' },
@@ -420,12 +420,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 { src: 'photos/2024/Aspen/BalloonFestival1.jpg', desc: 'Snowmass Balloon Festival during the popular Night Glow - a long-standing rocky mountain tradition.'},
                 { src: 'photos/2024/Aspen/BalloonFestival2.jpg', desc: 'Vibrant hot air balloons illuminate the twilight sky at the festival.'}
             ],
-            'Harvard University (2024)': [
+            'Harvard University': [
                 { src: 'photos/2024/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy at the conference on Multiphase Madness: Resolving the CGM in Theory and Observations.' },
                 { src: 'photos/2024/Harvard/Library.jpg', desc: 'Harvard Library - the largest academic and private library in the world.' },
                 { src: 'photos/2024/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' }
             ],
-	'Arizona State University (2023)': [
+	'Arizona State University': [
                 { src: 'photos/2023/ASU/GroupPhoto.jpg', desc: 'A group photo of the participants in attendance for the conference on Oases in the Cosmic Desert: Understanding the Structure of the Circumgalactic Medium at ASU, Arizona.'},
                 { src: 'photos/2023/ASU/Talk.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' },
                 { src: 'photos/2023/ASU/Talk2.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' }

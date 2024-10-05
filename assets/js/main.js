@@ -420,15 +420,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 { src: 'photos/2024/Aspen/View3.jpg', desc: 'Majestic Maroon Bells peaks towering over an alpine lake.'},
                 { src: 'photos/2024/Aspen/BalloonFestival1.jpg', desc: 'Snowmass Balloon Festival during the popular Night Glow - a long-standing rocky mountain tradition.'},
                 { src: 'photos/2024/Aspen/BalloonFestival2.jpg', desc: 'Vibrant hot air balloons illuminate the twilight sky at the festival.'}
-            ]
+            ],
             'Harvard University': [
                 { src: 'photos/2024/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy at the conference on Multiphase Madness: Resolving the CGM in Theory and Observations.' },
                 { src: 'photos/2024/Harvard/Library.jpg', desc: 'Harvard Library - the largest academic and private library in the world.' },
                 { src: 'photos/2024/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' }
-            ]
-	'Northwestern University': [
-                { src: 'photos/2024/CodeAstro/Presentation.jpg', desc: 'Presenting our Absorption line finding algorithm and its development at Code Astro.' },
-                { src: 'photos/2024/CodeAstro/Presentation2.jpg', desc: 'Demonstrating the setup of pyALF package for finding absorption lines in quasar spectra.' }
             ]
 	},
         '2023': {
@@ -437,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { src: 'photos/2023/ASU/Talk.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' },
                 { src: 'photos/2023/ASU/Talk2.jpg', desc: 'Delivering a talk on Observing the CGM through the Lens of a Forward Modeling Bayesian Approach.' }
             ]
-	},
+	}
         // Add more years and conferences as needed
     };
 

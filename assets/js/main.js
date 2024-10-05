@@ -430,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { src: 'photos/2024/CodeAstro/Presentation.jpg', desc: 'Presenting our Absorption line finding algorithm and its development at Code Astro.' },
                 { src: 'photos/2024/CodeAstro/Presentation2.jpg', desc: 'Demonstrating the setup of pyALF package for finding absorption lines in quasar spectra.' },
             ]
-	}
+	},
         '2023': {
             'Arizona State University': [
                 { src: 'photos/2023/ASU/GroupPhoto.JPG', desc: 'A group photo of the participants in attendance for the conference on Oases in the Cosmic Desert: Understanding the Structure of the Circumgalactic Medium' at ASU, Arizona.},

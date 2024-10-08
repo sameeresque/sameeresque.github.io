@@ -475,3 +475,11 @@ document.addEventListener('DOMContentLoaded', function() {
     populateConferenceSelect();
     updateImage();
 });
+document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+        this.style.display = 'none';
+        let iframe = this.nextElementSibling;
+        let src = iframe.src;
+        iframe.src = src.includes('?') ? src + '&autoplay=1' : src + '?autoplay=1';
+    });
+});

@@ -412,17 +412,11 @@ document.addEventListener('DOMContentLoaded', function() {
         'Aspen Center for Physics (2024)': [
             { src: 'photos/2024/Aspen/AspenGroupPhoto.JPG', desc: 'A group photo of the participants in attendance for the workshop on understanding the Multiphase CGM at Aspen Center for Physics, Aspen, Colorado.' },
             { src: 'photos/2024/Aspen/BlackBoardTalk1.jpg', desc: 'Delivering a blackboard talk on small scale structure in the CGM.' },
-		{ src: 'photos/2024/Aspen/BlackBoardTalk2.jpg', desc: 'Delivering a blackboard talk on small scale structure in the CGM.' },
-		{ src: 'photos/2024/Aspen/View1.jpg', desc: 'A stunning view of a manicured landscape surrounded by rolling hills in Aspen.' },
-		{ src: 'photos/2024/Aspen/View3.jpg', desc: 'Majestic Maroon Bells peaks towering over an alpine lake.'},
-		{ src: 'photos/2024/Aspen/BalloonFestival1.jpg', desc: 'Vibrant hot air balloons illuminate the twilight sky at the festival.'},
-		{ src: 'photos/2024/Aspen/BalloonFestival2.jpg', desc: 'Snowmass Balloon Festival during the popular Night Glow - a long-standing rocky mountain tradition.'}
+		{ src: 'photos/2024/Aspen/BlackBoardTalk2.jpg', desc: 'Delivering a blackboard talk on small scale structure in the CGM.' }
             // Add more images for this conference
         ],
         'Harvard University (2024)': [
-            { src: 'photos/2024/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy at the Multiphase Madness: Resolving the CGM in Theory and Observations.' },
-            { src: 'photos/2024/Harvard/Library.jpg', desc: 'Harvard Library - the largest academic and private library in the world.' },
-		 { src: 'photos/2024/Harvard/HarvardArtMuseum.jpg', desc: 'Gallery space at the Harvard Art Museum.' }
+            { src: 'photos/2024/Harvard/PresentationPic.jpg', desc: 'Presenting my work on the properties of Cool CGM Gas of the Andromeda galaxy at the Multiphase Madness: Resolving the CGM in Theory and Observations.' }
             // Add more images for this conference
         ],
 	'Arizona State University (2023)': [

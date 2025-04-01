@@ -1728,3 +1728,12 @@ article h2.major {
     width: 100% !important; 
     text-align: center !important;
 }
+
+/* Add this to the end of your main.css file (alternative solution) */
+#header nav ul li a {
+    text-align: center;
+    padding: 0 !important; /* Remove any padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

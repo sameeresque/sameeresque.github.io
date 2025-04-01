@@ -1721,8 +1721,10 @@ input, select, textarea {
     height: 100%;
 }
 
-/* Fix for centering major headings */
-h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
-    margin-left: auto;
-    margin-right: auto;
+/* Fix for centering Publications and Talks headings */
+article h2.major {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important; 
+    text-align: center !important;
 }

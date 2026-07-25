@@ -16,6 +16,10 @@
 			@media screen and (max-width: 980px) {
 				#main { max-width: 100% !important; }
 			}
+			/* Center research figure columns, especially when stacked on narrow screens */
+			#research div[style*="flex:0 0 420px"] {
+				margin: 0 auto !important;
+			}
 		</style>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -1113,6 +1117,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					document.body.style.overflow = 'hidden';
 				}
 				function closeLightbox(e) {
+					if (e) { e.stopPropagation(); e.preventDefault(); }
 					document.getElementById('research-lightbox').style.display = 'none';
 					document.body.style.overflow = '';
 				}
